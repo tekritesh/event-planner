@@ -92,3 +92,11 @@ class wa_invite():
                 self.log.info(f'Message Sent to {ph}') 
             except: 
                 self.log.error("Error in sending the message due to whatsapp issue")
+
+
+
+def cli(args=None):
+    test_df = pd.read_csv("tests/test_list.csv")
+    inst = wa_invite(df=test_df,msg_txt_file="tests/test.txt", log_level=logging.INFO)
+    inst.send_invite()
+

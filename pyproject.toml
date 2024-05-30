@@ -22,3 +22,6 @@ ipykernel = "^6.29.4"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+waMessenger = "event_planner.wa_invite:cli"
