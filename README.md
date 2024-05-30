@@ -66,17 +66,20 @@ poetry env info
 
 
 
-#### Using the poetry cli to run wa_messenger
 
-##### How to add contact list?
+
+#### How to add contact list?
+
   ![image](https://github.com/tekritesh/event-planner/assets/65660549/38934189-c00f-49a1-b144-b62e7ddf8ae9)
 
 Add your relevant names in the same order as the above sample tests/test_list.csv
 
-##### How to write the text message?
+#### How to write the text message?
+
 ![image](https://github.com/tekritesh/event-planner/assets/65660549/9124baa9-da02-4414-9b56-14757d1ae89b)
 The script personalises as per the names given in the tests/test_list.csv and replaces <NAME> with the contact name.
 
+#### Using the poetry cli to run wa_messenger
 
 ```bash
  # For Local Unit Check 
