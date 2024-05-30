@@ -1,6 +1,7 @@
 import pandas as pd
 import logging 
 import sys
+import argparse
 
 import pywhatkit as pwk
 
@@ -96,7 +97,19 @@ class wa_invite():
 
 
 def cli(args=None):
-    test_df = pd.read_csv("tests/test_list.csv")
-    inst = wa_invite(df=test_df,msg_txt_file="tests/test.txt", log_level=logging.INFO)
+    """Process command line arguments"""
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input_contact_list", type=str, default="tests/test_list.csv")
+    parser.add_argument("--input_msg_txt", type=str, default="tests/test.txt")
+    args = parser.parse_args()
+    
+    if not args.input_contact_list and not args.input_msg_txt:
+        print("Oops, you will need to provide input directory or input file")
+        parser.print_help(sys.stderr)
+        sys.exit(1)
+
+    test_df = pd.read_csv(args.input_contact_list)
+    inst = wa_invite(df=test_df,msg_txt_file=args.input_msg_txt, log_level=logging.INFO)
     inst.send_invite()
 
