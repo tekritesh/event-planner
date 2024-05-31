@@ -9,7 +9,8 @@ Python Lib for event planning
 | ----------------------- | ----------------- |
 | Base WA Messenger            | &#9745; Completed |
 | Personalised WA Message Compose          | &#9745; Completed |
-| Selective Map to Number  | &#9744; To do     |
+| Image/Video Attachment to WA Message | &#9744; To do     |
+| Selective Map of Message to Number  | &#9744; To do     |
 | Financial Planner   | &#9744; To do     |
 | Hotel/Flight Price Optimizer  | &#9744; To do     |
 | XX                      | &#9744; In progress|
